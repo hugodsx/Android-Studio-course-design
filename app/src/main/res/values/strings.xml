@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">My college</string>
+    <string name="tvInputTitle">标题：</string>
+    <string name="tvInputInfo">内容：</string>
+    <string name="spndate">请选择一周中的某一天</string>
+    <string name="btnSubmit">提交</string>
+    
+    <string name="Number1">1</string>
+    <string name="Number2">2</string>
+    <string name="Number3">3</string>
+    <string name="Number4">4</string>
+    <string name="Number5">5</string>
+    <string name="Number6">6</string>
+    <string name="Number7">7</string>
+    <string name="Number8">8</string>
+    <string name="Number9">9</string>
+    <string name="Number10">10</string>
+    <string name="Number11">11</string>
+    <string name="Number12">12</string>
+    <string name="Number13">13</string>
+    <string name="Number14">14</string>
+
+    <string name="Monday">周一</string>
+    <string name="Tuesday">周二</string>
+    <string name="Wednesday">周三</string>
+    <string name="Thursday">周四</string>
+    <string name="Friday">周五</string>
+    <string name="Saturday">周六</string>
+    <string name="Sunday">周日</string>
+
+    <string name="tvTest">aaa</string>
+    <string name="weekTitle">第%1$d周</string>
+
+</resources>

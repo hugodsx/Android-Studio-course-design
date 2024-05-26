@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".fragment.CoursetableFragment">
+
+    <!--顶部显示日期和星期数的列表-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="70dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UselessParent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridNumberTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            app:columnCount="1"
+            app:rowCount="1">
+
+            <TextView
+                android:id="@+id/timetable_tvWeekCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridMondayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvMondayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Monday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridTuesdayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvTuesdayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Tuesday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridWednesdayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvWednesdayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Wednesday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridThursdayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvThursdayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Thursday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridFridayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvFridayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Friday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSaturdayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvSaturdayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Saturday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSundayTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvSundayTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text="@string/Sunday"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_day"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="90dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UselessParent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridNumberDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            app:columnCount="1"
+            app:rowCount="1">
+
+            <TextView
+                android:id="@+id/timetable_tvBlank"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridMondayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvMondayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridTuesdayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvTuesdayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridWednesdayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvWednesdayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridThursdayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvThursdayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridFridayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvFridayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSaturdayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvSaturdayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSundayDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+            <TextView
+                android:id="@+id/timetable_tvSundayDay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/brown"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_rowWeight="0.5" />
+        </androidx.gridlayout.widget.GridLayout>
+
+    </LinearLayout>
+
+
+    <!--显示课程的表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="70dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:ignore="UselessParent">
+
+        <!--最左侧的课程序号列表-->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            app:columnCount="1"
+            app:rowCount="20">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <!--依次为周一至周日的列表-->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridMonday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            android:background="@color/skyblue"
+            app:columnCount="1"
+            app:rowCount="15">
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridTuesday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridWednesday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            android:background="@color/skyblue"
+            app:columnCount="1"
+            app:rowCount="15">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridThursday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            app:columnCount="1"
+            app:rowCount="15">
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridFriday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            android:background="@color/skyblue"
+            app:columnCount="1"
+            app:rowCount="15">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSaturday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            android:background="@color/brown"
+            app:columnCount="1"
+            app:rowCount="15">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridSunday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="2"
+            android:background="@color/brown"
+            app:columnCount="1"
+            app:rowCount="15">
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="130dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/fab_add"
+        tools:ignore="SpeakableTextPresentCheck"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="60dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/fab_settings"
+        tools:ignore="SpeakableTextPresentCheck"
+        />
+
+    <TextView
+        android:id="@+id/tvWeekTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="第1周"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#00000000"
+        android:drawableRight="@drawable/btn_previous"
+        android:padding="0dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#00000000"
+        android:drawableLeft="@drawable/btn_next"
+        android:padding="0dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

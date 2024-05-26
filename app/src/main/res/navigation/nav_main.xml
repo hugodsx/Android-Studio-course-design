@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/coursetableFragment">
+
+    <fragment
+        android:id="@+id/coursetableFragment"
+        android:name="com.example.mycollege.fragment.CoursetableFragment"
+        android:label="coursetable_fragment"
+        tools:layout="@layout/coursetable_fragment" >
+        <action
+            android:id="@+id/action_coursetableFragment_to_coursetableInputFragment"
+            app:destination="@id/coursetableInputFragment" />
+        <action
+            android:id="@+id/action_coursetableFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_coursetableFragment_to_coursetableSettingsFragment"
+            app:destination="@id/coursetableSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursetableInputFragment"
+        android:name="com.example.mycollege.fragment.CoursetableInputFragment"
+        android:label="inputcoursetable_fragment"
+        tools:layout="@layout/coursetableinput_fragment" >
+        <action
+            android:id="@+id/action_coursetableInputFragment_to_coursetableFragment"
+            app:destination="@id/coursetableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.mycollege.fragment.WeatherFragment"
+        android:label="WeatherFragment" />
+    <fragment
+        android:id="@+id/coursetableSettingsFragment"
+        android:name="com.example.mycollege.fragment.CoursetableSettingsFragment"
+        android:label="coursetablesettings_fragment"
+        tools:layout="@layout/coursetablesettings_fragment" >
+        <action
+            android:id="@+id/action_coursetableSettingsFragment_to_coursetableFragment"
+            app:destination="@id/coursetableFragment" />
+    </fragment>
+</navigation>

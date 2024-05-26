@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="courseDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+<!--        &lt;!&ndash; 自定义按钮的位置 &ndash;&gt;-->
+<!--        <item name="android:buttonBarStyle">@style/courseButtonBar</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--    </style>-->
+
+<!--    <style name="courseButtonBar" parent="Widget.AppCompat.ButtonBar.AlertDialog">-->
+<!--        &lt;!&ndash; 自定义按钮布局 &ndash;&gt;-->
+<!--        <item name="android:gravity">center_vertical</item>-->
+<!--    </style>-->
+
+</resources>
